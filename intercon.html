@@ -49,14 +49,20 @@
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
     padding: 0 5%; height: 72px;
-    background: rgba(11,42,91,0.96);
+    background: rgba(255,255,255,0.97);
     backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(11,42,91,0.10);
+    box-shadow: 0 2px 16px rgba(11,42,91,0.08);
   }
 
   .nav-logo {
-    display: flex; align-items: center; gap: 12px;
+    display: flex; align-items: center;
     text-decoration: none;
+  }
+
+  .nav-logo-img {
+    height: 48px; width: auto;
+    display: block; object-fit: contain;
   }
 
   .nav-logo-icon {
@@ -68,11 +74,11 @@
 
   .nav-logo-icon svg { width: 24px; height: 24px; }
 
-  .nav-logo-text { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.15rem; color: #fff; letter-spacing: 0.04em; }
+  .nav-logo-text { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.15rem; color: var(--blue); letter-spacing: 0.04em; }
 
   .nav-links { display: flex; gap: 36px; list-style: none; }
-  .nav-links a { color: rgba(255,255,255,0.78); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color var(--transition); }
-  .nav-links a:hover { color: var(--gold); }
+  .nav-links a { color: var(--gray-600); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color var(--transition); }
+  .nav-links a:hover { color: var(--blue); }
 
   .nav-cta {
     background: var(--gold); color: var(--blue);
@@ -665,7 +671,7 @@
   @media (max-width: 768px) {
     .nav-links, .nav-cta { display: none; }
     .nav-mobile-btn { display: block; }
-    .nav-mobile-btn svg { width: 24px; height: 24px; color: #fff; }
+    .nav-mobile-btn svg { width: 24px; height: 24px; color: var(--blue); }
 
     .hero-stats { gap: 24px; }
     .hero-search { flex-direction: column; }
@@ -691,13 +697,7 @@
 <!-- NAV -->
 <nav>
   <a class="nav-logo" href="#">
-    <div class="nav-logo-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="#0B2A5B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-        <polyline points="9 22 9 12 15 12 15 22"/>
-      </svg>
-    </div>
-    <span class="nav-logo-text">INTERCON</span>
+    <img src="logo-intercon.png" alt="INTERCON" class="nav-logo-img">
   </a>
 
   <ul class="nav-links">
